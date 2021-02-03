@@ -37,4 +37,9 @@ public class Tigre extends Mamiferos{
         System.out.println("Tigre comiendo...");
     }
     
+    public void correrRapido(){
+        
+        System.out.println("correr a 80km/h...");
+    }
+    
 }
