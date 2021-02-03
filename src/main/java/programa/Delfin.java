@@ -30,4 +30,11 @@ public class Delfin extends Mamiferos{
         this.metrosLargo = metrosLargo;
     }
     
+    @Override
+    public void comer(int kgComida){
+        
+        super.setPeso(super.getPeso() + kgComida);
+        System.out.println("Delfín comiendo...");
+    }
+    
 }

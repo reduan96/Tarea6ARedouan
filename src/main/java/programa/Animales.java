@@ -48,4 +48,10 @@ public abstract class Animales {
         this.sistemaCirculatorio = sistemaCirculatorio;
     }
     
+    public void comer(int kgComida){
+        
+        this.peso += kgComida;
+        System.out.println("Animal comiendo...");
+    }
+    
 }

@@ -30,4 +30,11 @@ public class Tigre extends Mamiferos{
         this.numColmillos = numColmillos;
     }
     
+    @Override
+    public void comer(int kgComida){
+        
+        super.setPeso(super.getPeso() + kgComida);
+        System.out.println("Tigre comiendo...");
+    }
+    
 }

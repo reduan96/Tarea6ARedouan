@@ -50,4 +50,11 @@ public abstract class Mamiferos extends Animales{
         this.numOjos = numOjos;
     }
     
+    @Override
+    public void comer(int kgComida){
+        
+        super.setPeso(super.getPeso() + kgComida);
+        System.out.println("Mamifero comiendo...");
+    }
+    
 }
