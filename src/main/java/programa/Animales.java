@@ -14,15 +14,18 @@ import java.util.Objects;
  */
 public class Animales {
 
+    //Atributos de la clase Animal
     private int peso;
     private int extremidades;
     private boolean sistemaCirculatorio;
     private ArrayList<Mamiferos> listaAnimales;
 
+    //Constructor por defecto
     public Animales() {
         this.listaAnimales = new ArrayList<Mamiferos>();
     }
 
+    //Constructor parametrizado
     public Animales(int peso, int extremidades, boolean sistemaCirculatorio) {
         this.listaAnimales = new ArrayList<Mamiferos>();
         this.peso = peso;
@@ -30,6 +33,7 @@ public class Animales {
         this.sistemaCirculatorio = sistemaCirculatorio;
     }
 
+    //Métodos getters y setters
     public ArrayList<Mamiferos> getListaAnimales() {
         return listaAnimales;
     }
@@ -62,18 +66,21 @@ public class Animales {
         this.sistemaCirculatorio = sistemaCirculatorio;
     }
 
+    //Método comer de clase Animales, es un método polimorfico
     public void comer(int kgComida) {
 
         this.peso += kgComida;
         System.out.println("Animal comiendo...");
     }
 
+    //Método toString sobreescrito de la clse Object
     @Override
     public String toString() {
         return "Animales{" + "peso=" + peso + ", extremidades=" + extremidades
                 + ", sistemaCirculatorio=" + sistemaCirculatorio + '}';
     }
 
+    //Método hashcode sobreescrito de la clse Object
     @Override
     public int hashCode() {
         int hash = 7;
@@ -84,6 +91,7 @@ public class Animales {
         return hash;
     }
 
+    //Método equals sobreescrito de la clse Object
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {

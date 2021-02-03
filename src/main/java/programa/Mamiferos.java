@@ -11,13 +11,16 @@ package programa;
  */
 public class Mamiferos extends Animales {
 
+    //Atributos de la subclase de Animales, la clase Mamiferos
     private boolean aletas;
     private boolean garras;
     private int numOjos;
 
+    //Constructor por defecto
     public Mamiferos() {
     }
 
+    //Constructor parametrizado
     public Mamiferos(boolean aletas, boolean garras, int numOjos,
             int peso, int extremidades, boolean sistemaCirculatorio) {
         super(peso, extremidades, sistemaCirculatorio);
@@ -26,6 +29,7 @@ public class Mamiferos extends Animales {
         this.numOjos = numOjos;
     }
 
+    //Métodos getters y setters
     public boolean isAletas() {
         return aletas;
     }
@@ -50,6 +54,7 @@ public class Mamiferos extends Animales {
         this.numOjos = numOjos;
     }
 
+    //Método sobreescrito, método polimorfico
     @Override
     public void comer(int kgComida) {
 
@@ -57,22 +62,26 @@ public class Mamiferos extends Animales {
         System.out.println("Mamifero comiendo...");
     }
 
+    //Método propio de la subclase mamiferos
     public void termoregulacion() {
 
         System.out.println("Regulando temperatura...");
     }
 
+    //Método sobreescrito en las subclases hijas Delfin y Tigre
     public void parir() {
 
         System.out.println("El mamífero esta pariendo...");
     }
 
+    //Método toString sobreescrito de la clse Object
     @Override
     public String toString() {
         return super.toString() + "Mamiferos{" + "aletas=" + aletas + ", garras="
                 + garras + ", numOjos=" + numOjos + '}';
     }
 
+    //Método hashcode sobreescrito de la clse Object
     @Override
     public int hashCode() {
         int hash = 7;
@@ -82,6 +91,7 @@ public class Mamiferos extends Animales {
         return hash;
     }
 
+    //Método equals sobreescrito de la clse Object
     @Override
     public boolean equals(Object obj) {
 

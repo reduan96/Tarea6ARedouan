@@ -52,12 +52,12 @@ public class Prueba {
 
                 ((Mamiferos) aux).termoregulacion();
             }
-            
+
             if (aux instanceof Delfin) {
 
                 ((Delfin) aux).nadarRapido();
             }
-            
+
             if (aux instanceof Tigre) {
 
                 ((Tigre) aux).correrRapido();
@@ -65,6 +65,7 @@ public class Prueba {
 
         }
 
+        
     }
 
 }
