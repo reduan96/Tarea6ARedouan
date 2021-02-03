@@ -46,5 +46,28 @@ public class Tigre extends Mamiferos{
     public String toString() {
         return super.toString() + "Tigre{" + "numColmillos=" + numColmillos + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + this.numColmillos;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        
+        if(!super.equals(obj)){
+            
+            return false;
+        }
+        
+        final Tigre other = (Tigre) obj;
+        if (this.numColmillos != other.numColmillos) {
+            return false;
+        }
+        return true;
+    }
+    
     
 }

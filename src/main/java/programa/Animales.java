@@ -59,5 +59,38 @@ public abstract class Animales {
         return "Animales{" + "peso=" + peso + ", extremidades=" + extremidades 
                 + ", sistemaCirculatorio=" + sistemaCirculatorio + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + this.peso;
+        hash = 37 * hash + this.extremidades;
+        hash = 37 * hash + (this.sistemaCirculatorio ? 1 : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Animales other = (Animales) obj;
+        if (this.peso != other.peso) {
+            return false;
+        }
+        if (this.extremidades != other.extremidades) {
+            return false;
+        }
+        if (this.sistemaCirculatorio != other.sistemaCirculatorio) {
+            return false;
+        }
+        return true;
+    }
     
 }

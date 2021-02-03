@@ -67,4 +67,36 @@ public abstract class Mamiferos extends Animales{
         return super.toString() + "Mamiferos{" + "aletas=" + aletas + ", garras=" 
                 + garras + ", numOjos=" + numOjos + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + (this.aletas ? 1 : 0);
+        hash = 29 * hash + (this.garras ? 1 : 0);
+        hash = 29 * hash + this.numOjos;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if(!super.equals(obj)){
+            
+            return false;
+        }
+        
+        final Mamiferos other = (Mamiferos) obj;
+        if (this.aletas != other.aletas) {
+            return false;
+        }
+        if (this.garras != other.garras) {
+            return false;
+        }
+        if (this.numOjos != other.numOjos) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 }

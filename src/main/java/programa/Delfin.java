@@ -46,5 +46,28 @@ public class Delfin extends Mamiferos{
     public String toString() {
         return super.toString() + "Delfin{" + "metrosLargo=" + metrosLargo + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 47 * hash + this.metrosLargo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        
+        if(!super.equals(obj)){
+            
+            return false;
+        }
+        
+        final Delfin other = (Delfin) obj;
+        if (this.metrosLargo != other.metrosLargo) {
+            return false;
+        }
+        return true;
+    }
+    
     
 }
