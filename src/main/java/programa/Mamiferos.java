@@ -61,5 +61,10 @@ public abstract class Mamiferos extends Animales{
         
         System.out.println("Regulando temperatura...");
     }
-    
+
+    @Override
+    public String toString() {
+        return super.toString() + "Mamiferos{" + "aletas=" + aletas + ", garras=" 
+                + garras + ", numOjos=" + numOjos + '}';
+    }
 }

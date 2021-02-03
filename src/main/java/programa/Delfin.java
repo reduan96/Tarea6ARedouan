@@ -41,5 +41,10 @@ public class Delfin extends Mamiferos{
         
         System.out.println("Delfín nadando a 60km/h...");
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Delfin{" + "metrosLargo=" + metrosLargo + '}';
+    }
     
 }

@@ -41,5 +41,10 @@ public class Tigre extends Mamiferos{
         
         System.out.println("correr a 80km/h...");
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Tigre{" + "numColmillos=" + numColmillos + '}';
+    }
     
 }

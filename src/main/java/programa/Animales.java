@@ -53,5 +53,11 @@ public abstract class Animales {
         this.peso += kgComida;
         System.out.println("Animal comiendo...");
     }
+
+    @Override
+    public String toString() {
+        return "Animales{" + "peso=" + peso + ", extremidades=" + extremidades 
+                + ", sistemaCirculatorio=" + sistemaCirculatorio + '}';
+    }
     
 }
