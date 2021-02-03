@@ -37,4 +37,9 @@ public class Delfin extends Mamiferos{
         System.out.println("Delfín comiendo...");
     }
     
+    public void nadarRapido(){
+        
+        System.out.println("Delfín nadando a 60km/h...");
+    }
+    
 }
