@@ -20,10 +20,12 @@ public class Prueba {
         Mamiferos mamiferos = new Mamiferos();
 
         //Creación de instancias tipo Delfin
+        //Conversión de tipos(conversión implicita)
         Animales orca = new Delfin(5, true, false, 2, 4200, 3, true);
         Animales delfinDusky = new Delfin(5, true, false, 2, 600, 3, true);
 
         //Creacion de instancias tipo Tigre
+        //Conversión de tipos(conversión implicita)
         Tigre tigreMalayo = new Tigre(4, false, true, 2, 430, 4, true);
         Tigre tigreSiberiano = new Tigre(6, false, true, 2, 610, 4, true);
 
@@ -49,17 +51,17 @@ public class Prueba {
         for (Animales aux : animales.getListaAnimales()) {
 
             if (aux instanceof Mamiferos) {
-
+                //Conversión de tipos(conversión explícita)
                 ((Mamiferos) aux).termoregulacion();
             }
 
             if (aux instanceof Delfin) {
-
+                //Conversión de tipos(conversión explícita)
                 ((Delfin) aux).nadarRapido();
             }
 
             if (aux instanceof Tigre) {
-
+                //Conversión de tipos(conversión explícita)
                 ((Tigre) aux).correrRapido();
             }
 
