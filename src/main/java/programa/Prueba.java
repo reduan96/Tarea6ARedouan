@@ -39,11 +39,11 @@ public class Prueba {
             animales.getListaAnimales().get(i).comer(6);
 
         }
-        System.out.println("\n");
+        System.out.println("---------------------------------");
 
         //Imprimir lista animales
         animales.getListaAnimales().forEach(System.out::println);
-        System.out.println("\n");
+        System.out.println("---------------------------------");
 
         //Llamada a metodos propios de cada clase B, C y D
         for (Animales aux : animales.getListaAnimales()) {
@@ -64,8 +64,17 @@ public class Prueba {
             }
 
         }
+        System.out.println("---------------------------------");
+        //indexof(Object o), contains(Object o) y remove(Object o) de la clase ArrayList
+        System.out.println("index of: " + animales.getListaAnimales().indexOf(orca));
+        System.out.println("contains: " + animales.getListaAnimales().contains(tigreMalayo));
+        //Imprimo lista de animales antes de borrar un objeto del mismo
+        animales.getListaAnimales().forEach(System.out::println);
+        animales.getListaAnimales().remove(tigreSiberiano);
+        System.out.println("---------------------------------");
+        //La imprimimmos después de borrar dicho objeto
+        animales.getListaAnimales().forEach(System.out::println);
 
-        
     }
 
 }
