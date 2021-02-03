@@ -57,4 +57,9 @@ public abstract class Mamiferos extends Animales{
         System.out.println("Mamifero comiendo...");
     }
     
+    public void termoregulacion(){
+        
+        System.out.println("Regulando temperatura...");
+    }
+    
 }
