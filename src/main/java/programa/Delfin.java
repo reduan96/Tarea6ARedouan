@@ -16,7 +16,7 @@ public class Delfin extends Mamiferos {
     public Delfin() {
     }
 
-    public Delfin(int metrosLargo, boolean aletas, boolean garras, int numOjos,
+    public Delfin(int metrosLargo, boolean aletas, boolean garras, int numOjos, 
             int peso, int extremidades, boolean sistemaCirculatorio) {
         super(aletas, garras, numOjos, peso, extremidades, sistemaCirculatorio);
         this.metrosLargo = metrosLargo;
@@ -30,6 +30,11 @@ public class Delfin extends Mamiferos {
         this.metrosLargo = metrosLargo;
     }
 
+    public void nadarRapido(){
+        
+        System.out.println("delfín nadando a 60km/h...");
+    }
+    
     @Override
     public void comer(int kgComida) {
 
@@ -37,14 +42,9 @@ public class Delfin extends Mamiferos {
         System.out.println("Delfín comiendo...");
     }
 
-    public void nadarRapido() {
-
-        System.out.println("Delfín nadando a 60km/h...");
-    }
-    
     @Override
-    public void parir(){
-        
+    public void parir() {
+
         System.out.println("El delfín esta pariendo...");
     }
 

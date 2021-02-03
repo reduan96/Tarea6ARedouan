@@ -39,12 +39,12 @@ public class Tigre extends Mamiferos {
 
     public void correrRapido() {
 
-        System.out.println("correr a 80km/h...");
+        System.out.println("Tigre corriendo a 80km/h...");
     }
-    
+
     @Override
-    public void parir(){
-        
+    public void parir() {
+
         System.out.println("La tigresa esta pariendo...");
     }
 

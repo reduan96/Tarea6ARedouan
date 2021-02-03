@@ -5,25 +5,39 @@
  */
 package programa;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 /**
  *
  * @author redu2
  */
-public abstract class Animales {
+public class Animales {
 
     private int peso;
     private int extremidades;
     private boolean sistemaCirculatorio;
+    private ArrayList<Mamiferos> listaAnimales;
 
     public Animales() {
+        this.listaAnimales = new ArrayList<Mamiferos>();
     }
 
     public Animales(int peso, int extremidades, boolean sistemaCirculatorio) {
+        this.listaAnimales = new ArrayList<Mamiferos>();
         this.peso = peso;
         this.extremidades = extremidades;
         this.sistemaCirculatorio = sistemaCirculatorio;
     }
 
+    public ArrayList<Mamiferos> getListaAnimales() {
+        return listaAnimales;
+    }
+
+    public void setListaAnimales(ArrayList<Mamiferos> listaAnimales) {
+        this.listaAnimales = listaAnimales;
+    }
+    
     public int getPeso() {
         return peso;
     }
@@ -63,9 +77,10 @@ public abstract class Animales {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 37 * hash + this.peso;
-        hash = 37 * hash + this.extremidades;
-        hash = 37 * hash + (this.sistemaCirculatorio ? 1 : 0);
+        hash = 71 * hash + this.peso;
+        hash = 71 * hash + this.extremidades;
+        hash = 71 * hash + (this.sistemaCirculatorio ? 1 : 0);
+        hash = 71 * hash + Objects.hashCode(this.listaAnimales);
         return hash;
     }
 

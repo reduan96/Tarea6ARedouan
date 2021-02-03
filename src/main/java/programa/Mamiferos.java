@@ -9,7 +9,7 @@ package programa;
  *
  * @author redu2
  */
-public abstract class Mamiferos extends Animales {
+public class Mamiferos extends Animales {
 
     private boolean aletas;
     private boolean garras;
@@ -61,9 +61,9 @@ public abstract class Mamiferos extends Animales {
 
         System.out.println("Regulando temperatura...");
     }
-    
-    public void parir(){
-        
+
+    public void parir() {
+
         System.out.println("El mamífero esta pariendo...");
     }
 
