@@ -10,7 +10,7 @@ package programa;
  * @author redu2
  */
 public abstract class Animales {
-    
+
     private int peso;
     private int extremidades;
     private boolean sistemaCirculatorio;
@@ -47,16 +47,16 @@ public abstract class Animales {
     public void setSistemaCirculatorio(boolean sistemaCirculatorio) {
         this.sistemaCirculatorio = sistemaCirculatorio;
     }
-    
-    public void comer(int kgComida){
-        
+
+    public void comer(int kgComida) {
+
         this.peso += kgComida;
         System.out.println("Animal comiendo...");
     }
 
     @Override
     public String toString() {
-        return "Animales{" + "peso=" + peso + ", extremidades=" + extremidades 
+        return "Animales{" + "peso=" + peso + ", extremidades=" + extremidades
                 + ", sistemaCirculatorio=" + sistemaCirculatorio + '}';
     }
 
@@ -92,5 +92,5 @@ public abstract class Animales {
         }
         return true;
     }
-    
+
 }

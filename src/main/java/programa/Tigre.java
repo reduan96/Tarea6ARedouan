@@ -9,8 +9,8 @@ package programa;
  *
  * @author redu2
  */
-public class Tigre extends Mamiferos{
-    
+public class Tigre extends Mamiferos {
+
     private int numColmillos;
 
     public Tigre() {
@@ -29,17 +29,23 @@ public class Tigre extends Mamiferos{
     public void setNumColmillos(int numColmillos) {
         this.numColmillos = numColmillos;
     }
-    
+
     @Override
-    public void comer(int kgComida){
-        
+    public void comer(int kgComida) {
+
         super.setPeso(super.getPeso() + kgComida);
         System.out.println("Tigre comiendo...");
     }
-    
-    public void correrRapido(){
-        
+
+    public void correrRapido() {
+
         System.out.println("correr a 80km/h...");
+    }
+    
+    @Override
+    public void parir(){
+        
+        System.out.println("La tigresa esta pariendo...");
     }
 
     @Override
@@ -56,18 +62,17 @@ public class Tigre extends Mamiferos{
 
     @Override
     public boolean equals(Object obj) {
-        
-        if(!super.equals(obj)){
-            
+
+        if (!super.equals(obj)) {
+
             return false;
         }
-        
+
         final Tigre other = (Tigre) obj;
         if (this.numColmillos != other.numColmillos) {
             return false;
         }
         return true;
     }
-    
-    
+
 }

@@ -9,8 +9,8 @@ package programa;
  *
  * @author redu2
  */
-public abstract class Mamiferos extends Animales{
-    
+public abstract class Mamiferos extends Animales {
+
     private boolean aletas;
     private boolean garras;
     private int numOjos;
@@ -18,7 +18,7 @@ public abstract class Mamiferos extends Animales{
     public Mamiferos() {
     }
 
-    public Mamiferos(boolean aletas, boolean garras, int numOjos, 
+    public Mamiferos(boolean aletas, boolean garras, int numOjos,
             int peso, int extremidades, boolean sistemaCirculatorio) {
         super(peso, extremidades, sistemaCirculatorio);
         this.aletas = aletas;
@@ -49,22 +49,27 @@ public abstract class Mamiferos extends Animales{
     public void setNumOjos(int numOjos) {
         this.numOjos = numOjos;
     }
-    
+
     @Override
-    public void comer(int kgComida){
-        
+    public void comer(int kgComida) {
+
         super.setPeso(super.getPeso() + kgComida);
         System.out.println("Mamifero comiendo...");
     }
-    
-    public void termoregulacion(){
-        
+
+    public void termoregulacion() {
+
         System.out.println("Regulando temperatura...");
+    }
+    
+    public void parir(){
+        
+        System.out.println("El mamífero esta pariendo...");
     }
 
     @Override
     public String toString() {
-        return super.toString() + "Mamiferos{" + "aletas=" + aletas + ", garras=" 
+        return super.toString() + "Mamiferos{" + "aletas=" + aletas + ", garras="
                 + garras + ", numOjos=" + numOjos + '}';
     }
 
@@ -80,11 +85,11 @@ public abstract class Mamiferos extends Animales{
     @Override
     public boolean equals(Object obj) {
 
-        if(!super.equals(obj)){
-            
+        if (!super.equals(obj)) {
+
             return false;
         }
-        
+
         final Mamiferos other = (Mamiferos) obj;
         if (this.aletas != other.aletas) {
             return false;
@@ -97,6 +102,5 @@ public abstract class Mamiferos extends Animales{
         }
         return true;
     }
-    
-    
+
 }

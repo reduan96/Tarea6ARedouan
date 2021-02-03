@@ -9,8 +9,8 @@ package programa;
  *
  * @author redu2
  */
-public class Delfin extends Mamiferos{
-    
+public class Delfin extends Mamiferos {
+
     private int metrosLargo;
 
     public Delfin() {
@@ -29,17 +29,23 @@ public class Delfin extends Mamiferos{
     public void setMetrosLargo(int metrosLargo) {
         this.metrosLargo = metrosLargo;
     }
-    
+
     @Override
-    public void comer(int kgComida){
-        
+    public void comer(int kgComida) {
+
         super.setPeso(super.getPeso() + kgComida);
         System.out.println("Delfín comiendo...");
     }
-    
-    public void nadarRapido(){
-        
+
+    public void nadarRapido() {
+
         System.out.println("Delfín nadando a 60km/h...");
+    }
+    
+    @Override
+    public void parir(){
+        
+        System.out.println("El delfín esta pariendo...");
     }
 
     @Override
@@ -56,18 +62,17 @@ public class Delfin extends Mamiferos{
 
     @Override
     public boolean equals(Object obj) {
-        
-        if(!super.equals(obj)){
-            
+
+        if (!super.equals(obj)) {
+
             return false;
         }
-        
+
         final Delfin other = (Delfin) obj;
         if (this.metrosLargo != other.metrosLargo) {
             return false;
         }
         return true;
     }
-    
-    
+
 }
